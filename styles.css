@@ -39,6 +39,10 @@ a {
   display: grid;
 }
 
+.header__top-left > input {
+  appearance: none;
+}
+
 .header__top-right {
   background-color: lightcoral;
   display: grid;
@@ -90,4 +94,47 @@ a {
 #main-content {
   background-color: cadetblue;
   grid-area: 2 / 2 / 3 / 3;
+
+  display: grid;
+  grid-template-columns: 1fr auto;
+}
+
+.main-content__projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+}
+
+.main-content__project {
+  background-color: #ddd;
+  border: 1px solid lightgray;
+
+  display: grid;
+  grid-template-rows: auto auto 1fr;
+}
+
+.main-content__project-icons {
+  align-self: end;
+  justify-self: end;
+}
+
+.main-content__info-announcement-grid {
+  background-color: #ddd;
+}
+
+.main-content__info-announce:not(:last-child) {
+  border-bottom: 1px solid gray;
+}
+
+.main-content__info-trending {
+  background-color: azure;
+}
+
+.main-content__info-user {
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+
+.main-content__info-user > * {
+  align-self: center;
 }

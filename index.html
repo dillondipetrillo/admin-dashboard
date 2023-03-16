@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Admin Dashboard</title>
     <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
     <script src="app.js" defer></script>
   </head>
   <body>
@@ -14,20 +18,25 @@
         <header id="header">
           <div class="header__top">
             <div class="header__top-left">
+              <i class="fa-solid fa-magnifying-glass"></i>
               <input type="search" name="search" id="search" />
             </div>
             <div class="header__top-right">
-              <div>A</div>
-              <div class="header__top-right-avatar">D</div>
+              <i class="fa-solid fa-bell"></i>
+              <div class="header__top-right-avatar">
+                <i class="fa-solid fa-skull"></i>
+              </div>
               <p class="header__top-right-username">Dillon Dipetrillo</p>
             </div>
           </div>
           <div class="header__bottom">
             <div class="header__bottom-left">
-              <div class="header__bottom-left-avatar">D</div>
+              <div class="header__bottom-left-avatar">
+                <i class="fa-solid fa-skull"></i>
+              </div>
               <div class="header__bottom-left-user-info">
                 <p>Hi there,</p>
-                <p>Dillon Dipetrillo (@dillon)</p>
+                <h1>Dillon Dipetrillo (@dillon)</h1>
               </div>
             </div>
             <div class="header__bottom-right">
@@ -40,24 +49,199 @@
         <section id="sidebar">
           <div class="sidebar__container">
             <div class="sidebar__logo">
+              <i class="fa-solid fa-paper-plane"></i>
               <p class="logo">Dashboard</p>
             </div>
             <div class="sidebar__nav-links">
-              <a href="#" class="sidebar__nav-link">Home</a>
-              <a href="#" class="sidebar__nav-link">Profile</a>
-              <a href="#" class="sidebar__nav-link">Messages</a>
-              <a href="#" class="sidebar__nav-link">Hsitory</a>
-              <a href="#" class="sidebar__nav-link">Tasks</a>
-              <a href="#" class="sidebar__nav-link">Communities</a>
+              <a href="#" class="sidebar__nav-link">
+                <i class="fa-solid fa-house"></i>
+                Home
+              </a>
+              <a href="#" class="sidebar__nav-link">
+                <i class="fa-solid fa-user"></i>
+                Profile
+              </a>
+              <a href="#" class="sidebar__nav-link">
+                <i class="fa-solid fa-envelope"></i>
+                Messages
+              </a>
+              <a href="#" class="sidebar__nav-link">
+                <i class="fa-solid fa-clock"></i>
+                Hsitory
+              </a>
+              <a href="#" class="sidebar__nav-link">
+                <i class="fa-solid fa-bars-progress"></i>
+                Tasks
+              </a>
+              <a href="#" class="sidebar__nav-link">
+                <i class="fa-solid fa-user-group"></i>
+                Communities
+              </a>
             </div>
             <div class="sidebar__help-links">
-              <a href="#" class="sidebar__help-link">Settings</a>
-              <a href="#" class="sidebar__help-link">Support</a>
-              <a href="#" class="sidebar__help-link">Privacy</a>
+              <a href="#" class="sidebar__help-link">
+                <i class="fa-solid fa-gear"></i>
+                Settings
+              </a>
+              <a href="#" class="sidebar__help-link">
+                <i class="fa-solid fa-circle-question"></i>
+                Support
+              </a>
+              <a href="#" class="sidebar__help-link">
+                <i class="fa-solid fa-lock"></i>
+                Privacy
+              </a>
             </div>
           </div>
         </section>
-        <section id="main-content">Main Content</section>
+        <section id="main-content">
+          <div class="main-content__projects">
+            <h2>Your Projects</h2>
+            <div class="main-content__projects-grid">
+              <div class="main-content__project">
+                <h3>Super Cool Project</h3>
+                <p>
+                  nisi vitae suscipit tellus mauris a diam maecenas sed enim ut
+                  sem viverra aliquet
+                </p>
+                <div class="main-content__project-icons">
+                  <i class="fa-regular fa-thumbs-up"></i>
+                  <i class="fa-solid fa-heart-circle-plus"></i>
+                  <i class="fa-solid fa-link"></i>
+                </div>
+              </div>
+              <div class="main-content__project">
+                <h3>Less Cool Project</h3>
+                <p>
+                  blandit volutpat maecenas volutpat blandit aliquam etiam erat
+                  velit scelerisque in dictum non consectetur
+                </p>
+                <div class="main-content__project-icons">
+                  <i class="fa-regular fa-thumbs-up"></i>
+                  <i class="fa-solid fa-heart-circle-plus"></i>
+                  <i class="fa-solid fa-link"></i>
+                </div>
+              </div>
+              <div class="main-content__project">
+                <h3>Impossible App</h3>
+                <p>
+                  blandit volutpat maecenas volutpat blandit aliquam etiam erat
+                  velit
+                </p>
+                <div class="main-content__project-icons">
+                  <i class="fa-regular fa-thumbs-up"></i>
+                  <i class="fa-solid fa-heart-circle-plus"></i>
+                  <i class="fa-solid fa-link"></i>
+                </div>
+              </div>
+              <div class="main-content__project">
+                <h3>Easy Peasy App</h3>
+                <p>
+                  nisl vel pretium lectus quam id leo in vitae turpis massa sed
+                  elementum tempus egestas sed sed risus
+                </p>
+                <div class="main-content__project-icons">
+                  <i class="fa-regular fa-thumbs-up"></i>
+                  <i class="fa-solid fa-heart-circle-plus"></i>
+                  <i class="fa-solid fa-link"></i>
+                </div>
+              </div>
+              <div class="main-content__project">
+                <h3>Ad Blocker</h3>
+                <p>
+                  nisl vel pretium lectus quam id leo in vitae turpis massa sed
+                  elementum tempus egestas sed
+                </p>
+                <div class="main-content__project-icons">
+                  <i class="fa-regular fa-thumbs-up"></i>
+                  <i class="fa-solid fa-heart-circle-plus"></i>
+                  <i class="fa-solid fa-link"></i>
+                </div>
+              </div>
+              <div class="main-content__project">
+                <h3>Money Maker</h3>
+                <p>
+                  nisl vel pretium lectus quam id leo in vitae turpis massa sed
+                  elementum tempus
+                </p>
+                <div class="main-content__project-icons">
+                  <i class="fa-regular fa-thumbs-up"></i>
+                  <i class="fa-solid fa-heart-circle-plus"></i>
+                  <i class="fa-solid fa-link"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="main-content__info">
+            <div class="main-content__info-annoucement">
+              <h2>Announcements</h2>
+              <div class="main-content__info-announcement-grid">
+                <div class="main-content__info-announce">
+                  <h4>Site Maintenance</h4>
+                  <p>
+                    viverra aliquet eget sit amet tellus cras adipiscing enim eu
+                    turpis egestas pretium...
+                  </p>
+                </div>
+                <div class="main-content__info-announce">
+                  <h4>Community Share Day</h4>
+                  <p>
+                    viverra aliquet eget sit amet tellus cras adipiscing enim eu
+                    turpis egestas...
+                  </p>
+                </div>
+                <div class="main-content__info-announce">
+                  <h4>Updated Privacy Policy</h4>
+                  <p>
+                    viverra aliquet eget sit amet tellus cras adipiscing enim eu
+                    turpis egestas pretium...
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="main-content__info-trending">
+              <h2>Trending</h2>
+              <div class="main-content__info-trending-grid">
+                <div class="main-content__info-user">
+                  <div class="main-content__info-avatar">
+                    <i class="fa-solid fa-user-secret"></i>
+                  </div>
+                  <div class="main-content__info-profile">
+                    <h4>@tegan</h4>
+                    <p>World Peace Builder</p>
+                  </div>
+                </div>
+                <div class="main-content__info-user">
+                  <div class="main-content__info-avatar">
+                    <i class="fa-solid fa-skull"></i>
+                  </div>
+                  <div class="main-content__info-profile">
+                    <h4>@dillon</h4>
+                    <p>Super Cool Project</p>
+                  </div>
+                </div>
+                <div class="main-content__info-user">
+                  <div class="main-content__info-avatar">
+                    <i class="fa-regular fa-face-smile"></i>
+                  </div>
+                  <div class="main-content__info-profile">
+                    <h4>@kendall</h4>
+                    <p>Life Changing App</p>
+                  </div>
+                </div>
+                <div class="main-content__info-user">
+                  <div class="main-content__info-avatar">
+                    <i class="fa-solid fa-user-doctor"></i>
+                  </div>
+                  <div class="main-content__info-profile">
+                    <h4>@alex</h4>
+                    <p>No Traffic Maker</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
     </main>
   </body>
