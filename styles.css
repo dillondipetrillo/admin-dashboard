@@ -24,6 +24,17 @@ a {
   min-height: 100vh;
 }
 
+.dark-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 3;
+  transform: translateX(-100%);
+}
+
 /* ----------Header Styles ---------- */
 #header {
   background-color: #fff;
@@ -32,7 +43,7 @@ a {
   box-shadow: 5px 2px 8px rgb(189, 189, 189);
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 2;
 }
 
 .header__top,
@@ -45,6 +56,10 @@ a {
   display: grid;
   grid-template-columns: auto 1fr;
   padding: 20px 0 15px;
+}
+
+.header__top-left-menu {
+  display: none;
 }
 
 .header__top-left > label i {
@@ -73,7 +88,7 @@ a {
   display: grid;
   grid-template-columns: repeat(3, auto);
   gap: 25px;
-  margin-left: 40px;
+  margin-left: 80px;
 }
 
 .header__top-right > i:hover,
@@ -161,6 +176,7 @@ a {
   position: sticky;
   top: 0;
   max-height: 100vh;
+  max-width: 300px;
 }
 
 .sidebar__container {
@@ -173,6 +189,15 @@ a {
 .sidebar__logo {
   font-weight: 600;
   font-size: 1.5rem;
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 1.5rem;
+  display: none;
 }
 
 .sidebar__logo > i {
@@ -216,7 +241,7 @@ a {
 .main-content__wrapper {
   display: grid;
   grid-template-columns: 1fr auto;
-  margin: 35px auto 0;
+  margin: 35px auto;
   max-width: 1400px;
   padding: 0 25px;
 }
@@ -376,4 +401,166 @@ a {
 
 .main-content__info-user:last-child > .main-content__info-avatar {
   background-color: rgb(247, 118, 140);
+}
+
+@media (max-width: 1150px) {
+  .container {
+    grid-template-columns: 0 1fr;
+  }
+
+  #header {
+    padding: 0 25px;
+  }
+
+  .header__top-left {
+    grid-template-columns: auto auto 1fr;
+  }
+
+  .header__top-left-menu {
+    display: block;
+    margin-right: 50px;
+    transition: 0.1s ease-in-out;
+    padding: 8px;
+    border-radius: 50%;
+    min-width: 40px;
+    text-align: center;
+    font-size: 1.2rem;
+  }
+
+  .header__top-left-menu:hover {
+    background-color: #eee;
+    cursor: pointer;
+  }
+
+  #sidebar {
+    position: fixed;
+    height: 100vh;
+    transform: translateX(-300px);
+    transition: 0.2s ease-in-out;
+    z-index: 5;
+  }
+
+  #sidebar.open {
+    transform: translateX(0);
+  }
+
+  .dark-overlay.open {
+    transform: translateX(0);
+  }
+
+  body.no-scroll {
+    overflow: hidden;
+  }
+
+  .close-btn {
+    display: block;
+  }
+
+  .close-btn:hover {
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 800px) {
+  .header__bottom-left {
+    padding: 8px 0 15px;
+  }
+
+  .header__bottom-left-user-info h1 {
+    font-size: 1.3rem;
+  }
+
+  .header__bottom-left-avatar {
+    padding: 10px;
+    margin-right: 15px;
+  }
+
+  .header__bottom-left-avatar > i {
+    font-size: 1.5rem;
+  }
+
+  .header__bottom-right > a {
+    min-width: 80px;
+    font-size: 0.8rem;
+  }
+
+  .header__top-left-menu {
+    margin-right: 30px;
+  }
+}
+
+@media (max-width: 690px) {
+  .header__top-right-username {
+    display: none;
+  }
+
+  .header__top-left > input {
+    min-width: 60px;
+  }
+
+  .header__top-right {
+    grid-template-columns: repeat(2, auto);
+    gap: 25px;
+    margin-left: 60px;
+  }
+
+  .header__bottom-left-user-info h1 {
+    font-size: 1rem;
+  }
+
+  .header__bottom-left {
+    grid-template-columns: auto;
+  }
+
+  .header__bottom-left-avatar {
+    display: none;
+  }
+
+  .header__bottom-right > a {
+    min-width: 60px;
+    font-size: 0.7rem;
+  }
+
+  .header__bottom-right {
+    gap: 15px;
+    margin-left: 20px;
+  }
+
+  .main-content__wrapper {
+    grid-template-columns: auto;
+    padding: 0 25px;
+  }
+
+  .main-content__projects {
+    padding-right: 0;
+  }
+
+  .main-content__info,
+  .main-content__info-trending {
+    display: none;
+  }
+}
+
+@media (max-width: 460px) {
+  #header {
+    padding: 0 20px;
+  }
+
+  .header__top-left-menu {
+    min-width: 0;
+    font-size: 1.4rem;
+  }
+
+  .header__top-left > label,
+  .header__top-left > input {
+    display: none;
+  }
+
+  .header__bottom {
+    display: none;
+  }
+
+  .main-content__projects-grid {
+    grid-template-columns: auto;
+  }
 }
