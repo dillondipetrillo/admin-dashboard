@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+
 * {
   padding: 0;
   margin: 0;
@@ -7,6 +9,7 @@
 html {
   box-sizing: inherit;
   font-size: 16px;
+  font-family: "Roboto", sans-serif;
 }
 
 a {
@@ -37,6 +40,7 @@ a {
 .header__top-left {
   background-color: aquamarine;
   display: grid;
+  grid-template-columns: auto 1fr;
 }
 
 .header__top-left > input {
@@ -82,7 +86,17 @@ a {
 .sidebar__container {
   display: grid;
   grid-template-rows: repeat(3, auto);
-  gap: 30px;
+  gap: 50px;
+  padding: 25px;
+}
+
+.sidebar__logo {
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.sidebar__logo > i {
+  margin-right: 8px;
 }
 
 .sidebar__nav-links,
@@ -90,13 +104,40 @@ a {
   display: grid;
 }
 
+.sidebar__nav-link,
+.sidebar__help-link {
+  padding: 12px 120px 12px 12px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: 0.1s ease-in-out;
+}
+
+.sidebar__nav-link.active,
+.sidebar__help-link.active {
+  background-color: lightsteelblue;
+}
+
+.sidebar__nav-link:not(.active):hover,
+.sidebar__help-link:not(.active):hover {
+  background-color: lightgray;
+}
+
+.sidebar__nav-link > i,
+.sidebar__help-link > i {
+  margin-right: 12px;
+}
+
 /* -------- Main-Content Styles ---------- */
 #main-content {
   background-color: cadetblue;
   grid-area: 2 / 2 / 3 / 3;
+}
 
+.main-content__wrapper {
   display: grid;
   grid-template-columns: 1fr auto;
+  margin: 0 auto;
+  max-width: 1400px;
 }
 
 .main-content__projects-grid {
@@ -126,7 +167,7 @@ a {
   border-bottom: 1px solid gray;
 }
 
-.main-content__info-trending {
+.main-content__info-trending-grid {
   background-color: azure;
 }
 
